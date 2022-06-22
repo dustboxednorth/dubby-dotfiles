@@ -156,8 +156,8 @@ separator = widget.Sep(padding=10, size_percent=25, foreground='bebebe')
 
 screens = [
     Screen(
-	wallpaper = '~/Pictures/Wallpapers/Angewandt_Layers_Background_light_2.png',
-	wallpaper_mode = 'stretch', 
+	# wallpaper = '~/Pictures/Wallpapers/Angewandt_Layers_Background_light_2.png',
+	# wallpaper_mode = 'stretch', 
         top = bar.Bar(
             [
                 widget.GroupBox(
