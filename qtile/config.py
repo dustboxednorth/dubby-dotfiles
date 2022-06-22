@@ -32,6 +32,11 @@ import psutil
 
 mod = "mod4"
 terminal = "kitty"
+scrotout = "scrot '~/!BOOKSHELF/Pictures/Screenshots/`date +%Y`/`date +%Y_m`/%F_%T_$wx$h.png"
+scrotoutS = "scrot -s '~/!BOOKSHELF/Pictures/Screenshots/`date +%Y`/`date +%Y_m`/%F_%T_$wx$h.png"
+
+scrotclip = "scrot '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'"
+scrotclipS = "scrot -s '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -76,8 +81,11 @@ keys = [
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume 0 +2%")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume 0 -2%")),
     Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute toggle")),
-    Key([], "Print", lazy.spawn("scrot 'tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'")),
-    Key(["shift"], "Print", lazy.spawn("scrot -s 'tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'")),
+   
+    Key([], "Print", lazy.spawn(scrotclip)),
+    Key(["shift"], "Print", lazy.spawn(scrotclipS)),
+    Key([mod], "Print", lazy.spawn(scrotout)),
+    Key([mod, "shift"] "Print", lazy.spawn(scrotoutS)),
 
     # Chords
     KeyChord([mod], "x", [
