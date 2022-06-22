@@ -85,7 +85,7 @@ keys = [
     Key([], "Print", lazy.spawn(scrotclip)),
     Key(["shift"], "Print", lazy.spawn(scrotclipS)),
     Key([mod], "Print", lazy.spawn(scrotout)),
-    Key([mod, "shift"] "Print", lazy.spawn(scrotoutS)),
+    Key([mod, "shift"], "Print", lazy.spawn(scrotoutS)),
 
     # Chords
     KeyChord([mod], "x", [
