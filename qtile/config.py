@@ -76,6 +76,8 @@ keys = [
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume 0 +2%")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume 0 -2%")),
     Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute toggle")),
+    Key([], "Print", lazy.spawn("scrot 'tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'")),
+    Key(["shift"], "Print", lazy.spawn("scrot -s 'tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'")),
 
     # Chords
     KeyChord([mod], "x", [
