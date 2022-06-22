@@ -5,3 +5,13 @@ The Qtile config bundled in this repository requires `psutil` and can be install
 
 # kitty.conf, theme.conf
 for the kitty terminal
+
+# qtile-config.py
+for the Qtile window manager (duh)
+
+# angewandt.rasi, config.rasi
+for the Rofi application launcher
+
+# picom.conf
+for Picom (again, duh)
+
